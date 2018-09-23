@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="css/style.css" />
       <title>
          To-do List
       </title>
@@ -12,25 +12,6 @@
       <input id="input" placeholder="What needs to be done?">
       <ul id="list"></ul>
    </body>
-   <script>
-  function newItem() {
-  var item = document.getElementById("input").value;
-  var ul = document.getElementById("list");
-  var li = document.createElement("li");
-  li.appendChild(document.createTextNode("- " + item));
-  ul.appendChild(li);
-  document.getElementById("input").value = "";
-  li.onclick = removeItem;
-}
-
-document.body.onkeyup = function(e) {
-  if (e.keyCode == 13) {
-    newItem();
-  }
-};
-
-function removeItem(e) {
-  e.target.parentElement.removeChild(e.target);
-}
-   </script>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/index.js"></script>
  </html>
