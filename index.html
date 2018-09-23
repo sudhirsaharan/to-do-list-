@@ -13,7 +13,7 @@
       <ul id="list"></ul>
    </body>
    <script>
-   function newItem() {
+  function newItem() {
   var item = document.getElementById("input").value;
   var ul = document.getElementById("list");
   var li = document.createElement("li");
@@ -28,5 +28,9 @@ document.body.onkeyup = function(e) {
     newItem();
   }
 };
+
+function removeItem(e) {
+  e.target.parentElement.removeChild(e.target);
+}
    </script>
  </html>
